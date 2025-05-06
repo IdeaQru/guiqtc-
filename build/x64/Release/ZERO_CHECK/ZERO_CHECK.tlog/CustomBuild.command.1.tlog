@@ -1,0 +1,10 @@
+^D:\PROJECT\GUISENSOR\BUILD\CMAKEFILES\0B3F7CBDA3EFBDBEA739026AA0D267D4\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Project/GuiSensor -BD:/Project/GuiSensor/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/Project/GuiSensor/build/GuiSensor.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

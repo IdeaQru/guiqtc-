@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sensor Monitor</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QWidget" name="controlPanel" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QComboBox" name="portComboBox">
+         <property name="styleSheet">
+          <string>QComboBox {
+              background: #2d2d2d;
+              color: #ffffff;
+              border-radius: 5px;
+              border: 1px solid #3d3d3d;
+              padding: 4px;
+          }
+          QComboBox QAbstractItemView {
+              background: #2d2d2d;
+              color: #ffffff;
+          }</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="connectButton">
+         <property name="text">
+          <string>Connect</string>
+         </property>
+         <property name="styleSheet">
+          <string>QPushButton {
+              background: #4CAF50;
+              color: white;
+              border-radius: 5px;
+              padding: 8px;
+          }
+          QPushButton:hover {
+              background: #45a049;
+          }</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="statusLabel">
+         <property name="text">
+          <string>Status: Disconnected</string>
+         </property>
+         <property name="styleSheet">
+          <string>QLabel {
+              color: #ff4444;
+              font-weight: bold;
+          }</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QScrollArea" name="sensorPanel">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="afrLabel">
+          <property name="text">
+           <string>AFR: --</string>
+          </property>
+          <property name="styleSheet">
+           <string>QLabel {
+               color: #2196F3;
+               background: #1a1a1a;
+               border-radius: 10px;
+               padding: 10px;
+               font-size: 12pt;
+               font-weight: bold;
+           }</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="rpmLabel">
+          <property name="text">
+           <string>RPM: --</string>
+          </property>
+          <property name="styleSheet">
+           <string>QLabel {
+               color: #ff4444;
+               background: #1a1a1a;
+               border-radius: 10px;
+               padding: 10px;
+               font-size: 12pt;
+               font-weight: bold;
+           }</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="tempLabel">
+          <property name="text">
+           <string>Temp: --</string>
+          </property>
+          <property name="styleSheet">
+           <string>QLabel {
+               color: #FFD700;
+               background: #1a1a1a;
+               border-radius: 10px;
+               padding: 10px;
+               font-size: 12pt;
+               font-weight: bold;
+           }</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="tpsLabel">
+          <property name="text">
+           <string>TPS: --</string>
+          </property>
+          <property name="styleSheet">
+           <string>QLabel {
+               color: #00FF88;
+               background: #1a1a1a;
+               border-radius: 10px;
+               padding: 10px;
+               font-size: 12pt;
+               font-weight: bold;
+           }</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="mapLabel">
+          <property name="text">
+           <string>MAP: --</string>
+          </property>
+          <property name="styleSheet">
+           <string>QLabel {
+               color: #FFA500;
+               background: #1a1a1a;
+               border-radius: 10px;
+               padding: 10px;
+               font-size: 12pt;
+               font-weight: bold;
+           }</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="plotTabs">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tabAFR">
+       <attribute name="title">
+        <string>AFR</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QCustomPlot" name="plotAFR" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>200</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabRPM">
+       <attribute name="title">
+        <string>RPM</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QCustomPlot" name="plotRPM" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>200</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabTemp">
+       <attribute name="title">
+        <string>Temp</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QCustomPlot" name="plotTemp" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>200</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabTPS">
+       <attribute name="title">
+        <string>TPS</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QCustomPlot" name="plotTPS" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>200</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabMAP">
+       <attribute name="title">
+        <string>MAP</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QCustomPlot" name="plotMAP" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>200</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
