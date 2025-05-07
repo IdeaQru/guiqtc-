@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CombinedGraphs</class>
+ <widget class="QWidget" name="CombinedGraphs">
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QCustomPlot" name="plotCombined" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>400</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="legendWidget" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QCheckBox" name="checkAFR">
+        <property name="text">
+         <string>AFR</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string>QCheckBox {
+             color: #2196F3;
+             font-weight: bold;
+         }</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkRPM">
+        <property name="text">
+         <string>RPM</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string>QCheckBox {
+             color: #ff4444;
+             font-weight: bold;
+         }</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkTemp">
+        <property name="text">
+         <string>Temp</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string>QCheckBox {
+             color: #FFD700;
+             font-weight: bold;
+         }</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkTPS">
+        <property name="text">
+         <string>TPS</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string>QCheckBox {
+             color: #00FF88;
+             font-weight: bold;
+         }</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkMAP">
+        <property name="text">
+         <string>MAP</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string>QCheckBox {
+             color: #FFA500;
+             font-weight: bold;
+         }</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+</ui>

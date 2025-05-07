@@ -7,11 +7,11 @@ set(CMAKE_AUTORCC ON)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 # 1. Tambahkan modul SerialPort dan PrintSupport untuk QCustomPlot
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets SerialPort PrintSupport LinguistTools)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets SerialPort PrintSupport LinguistTools)
-
 set(TS_FILES GuiSensor_id_ID.ts)
 
 # 2. Tambahkan file QCustomPlot ke dalam sumber
@@ -22,6 +22,17 @@ set(PROJECT_SOURCES
     mainwindow.ui
     qcustomplot.cpp  # Pastikan file ini ada di folder proyek
     qcustomplot.h     # Pastikan file ini ada di folder proyek
+    widgets/SensorCards/SensorCards.h
+    widgets/SensorCards/SensorCards.cpp
+    widgets/SensorCards/SensorCards.ui
+    widgets/IndividualGraphs/IndividualGraphs.h
+    widgets/IndividualGraphs/IndividualGraphs.cpp
+    widgets/IndividualGraphs/IndividualGraphs.ui
+    widgets/CombinedGraph/CombinedGraphs.h
+    widgets/CombinedGraph/CombinedGraphs.cpp
+    widgets/CombinedGraph/CombinedGraphs.ui
+    utils/SerialHandler.h
+    utils/SerialHandler.cpp
     ${TS_FILES}
 )
 
@@ -45,11 +56,18 @@ else()
 endif()
 
 # 3. Link library Qt yang diperlukan
+# 3. Link library Qt yang diperlukan
 target_link_libraries(GuiSensor PRIVATE 
     Qt${QT_VERSION_MAJOR}::Widgets
     Qt${QT_VERSION_MAJOR}::SerialPort
     Qt${QT_VERSION_MAJOR}::PrintSupport
 )
+
+# Tambahkan EntryPoint hanya jika menggunakan Qt6
+if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
+    target_link_libraries(GuiSensor PRIVATE Qt6::EntryPoint)
+endif()
+
 
 # 4. Set properties tambahan (opsional)
 if(${QT_VERSION} VERSION_LESS 6.1.0)

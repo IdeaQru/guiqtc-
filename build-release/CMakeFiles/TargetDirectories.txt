@@ -1,0 +1,4 @@
+D:/Project/GuiSensor/build-release/CMakeFiles/GuiSensor.dir
+D:/Project/GuiSensor/build-release/CMakeFiles/INSTALL.dir
+D:/Project/GuiSensor/build-release/CMakeFiles/ALL_BUILD.dir
+D:/Project/GuiSensor/build-release/CMakeFiles/ZERO_CHECK.dir

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SensorCards</class>
+ <widget class="QWidget" name="SensorCards">
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QScrollArea" name="sensorPanel">
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="afrLabel">
+         <property name="text">
+          <string>AFR: --</string>
+         </property>
+         <property name="styleSheet">
+          <string>QLabel {
+              color: #2196F3;
+              background: #1a1a1a;
+              border-radius: 10px;
+              padding: 10px;
+              font-size: 12pt;
+              font-weight: bold;
+          }</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="rpmLabel">
+         <property name="text">
+          <string>RPM: --</string>
+         </property>
+         <property name="styleSheet">
+          <string>QLabel {
+              color: #ff4444;
+              background: #1a1a1a;
+              border-radius: 10px;
+              padding: 10px;
+              font-size: 12pt;
+              font-weight: bold;
+          }</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="tempLabel">
+         <property name="text">
+          <string>Temp: --</string>
+         </property>
+         <property name="styleSheet">
+          <string>QLabel {
+              color: #FFD700;
+              background: #1a1a1a;
+              border-radius: 10px;
+              padding: 10px;
+              font-size: 12pt;
+              font-weight: bold;
+          }</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="tpsLabel">
+         <property name="text">
+          <string>TPS: --</string>
+         </property>
+         <property name="styleSheet">
+          <string>QLabel {
+              color: #00FF88;
+              background: #1a1a1a;
+              border-radius: 10px;
+              padding: 10px;
+              font-size: 12pt;
+              font-weight: bold;
+          }</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="mapLabel">
+         <property name="text">
+          <string>MAP: --</string>
+         </property>
+         <property name="styleSheet">
+          <string>QLabel {
+              color: #FFA500;
+              background: #1a1a1a;
+              border-radius: 10px;
+              padding: 10px;
+              font-size: 12pt;
+              font-weight: bold;
+          }</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+</ui>

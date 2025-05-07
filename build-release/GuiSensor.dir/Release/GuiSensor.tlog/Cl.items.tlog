@@ -1,0 +1,8 @@
+D:\Project\GuiSensor\main.cpp;D:\Project\GuiSensor\build-release\GuiSensor.dir\Release\main.obj
+D:\Project\GuiSensor\mainwindow.cpp;D:\Project\GuiSensor\build-release\GuiSensor.dir\Release\mainwindow.obj
+D:\Project\GuiSensor\qcustomplot.cpp;D:\Project\GuiSensor\build-release\GuiSensor.dir\Release\qcustomplot.obj
+D:\Project\GuiSensor\widgets\SensorCards\SensorCards.cpp;D:\Project\GuiSensor\build-release\GuiSensor.dir\Release\SensorCards.obj
+D:\Project\GuiSensor\widgets\IndividualGraphs\IndividualGraphs.cpp;D:\Project\GuiSensor\build-release\GuiSensor.dir\Release\IndividualGraphs.obj
+D:\Project\GuiSensor\widgets\CombinedGraph\CombinedGraphs.cpp;D:\Project\GuiSensor\build-release\GuiSensor.dir\Release\CombinedGraphs.obj
+D:\Project\GuiSensor\utils\SerialHandler.cpp;D:\Project\GuiSensor\build-release\GuiSensor.dir\Release\SerialHandler.obj
+D:\Project\GuiSensor\build-release\GuiSensor_autogen\mocs_compilation_Release.cpp;D:\Project\GuiSensor\build-release\GuiSensor.dir\Release\mocs_compilation_Release.obj

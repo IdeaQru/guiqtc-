@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "D:/qt/6.10.0/msvc2022_64/include/**",  // Sesuaikan dengan lokasi Qt Anda
+                "D:/qt/6.10.0/msvc2022_64/include/QtCore",
+                "D:/qt/6.10.0/msvc2022_64/include/QtSerialPort",
+                "D:/qt/6.10.0/msvc2022_64/include/QtWidgets"
+            ],
+            "defines": [],
+            "windowsSdkVersion": "10.0.19041.0",
+            "compilerPath": "cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}
