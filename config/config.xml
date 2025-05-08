@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Installer>
+    <Name>GuiSensor</Name>
+    <Version>1.0.0</Version>
+    <Title>GuiSensor Installer</Title>
+    <Publisher>Ideaqru</Publisher>
+    <StartMenuDir>GuiSensor</StartMenuDir>
+    <TargetDir>@ApplicationsDir@/GuiSensor</TargetDir>
+</Installer>
