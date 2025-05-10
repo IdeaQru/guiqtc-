@@ -33,9 +33,6 @@
        </item>
        <item>
         <widget class="QPushButton" name="connectButton">
-         <property name="text">
-          <string>Connect</string>
-         </property>
          <property name="styleSheet">
           <string>QPushButton {
               background: #4CAF50;
@@ -44,18 +41,21 @@
               padding: 8px;
           }</string>
          </property>
+         <property name="text">
+          <string>Connect</string>
+         </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="statusLabel">
-         <property name="text">
-          <string>Status: Disconnected</string>
-         </property>
          <property name="styleSheet">
           <string>QLabel {
               color: #ff4444;
               font-weight: bold;
           }</string>
+         </property>
+         <property name="text">
+          <string>Status: Disconnected</string>
          </property>
         </widget>
        </item>

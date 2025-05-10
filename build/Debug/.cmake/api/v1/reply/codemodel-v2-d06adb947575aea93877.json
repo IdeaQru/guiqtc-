@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-e8a187512b60d708263c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "GuiSensor",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "GuiSensor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GuiSensor-Debug-2dc6b1fc8f43dfd39d8e.json",
+					"name" : "GuiSensor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GuiSensor_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GuiSensor_autogen-Debug-a8b750e3b91ee5e7e956.json",
+					"name" : "GuiSensor_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GuiSensor_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GuiSensor_autogen_timestamp_deps-Debug-71a463aca4b9e58990b9.json",
+					"name" : "GuiSensor_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Project/GuiSensor/build/Debug",
+		"source" : "D:/Project/GuiSensor"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
