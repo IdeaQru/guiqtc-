@@ -65,7 +65,7 @@
     <item>
      <widget class="QTabWidget" name="mainTabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="tabSensorCards">
        <attribute name="title">
@@ -84,6 +84,12 @@
         <string>Combined Graph</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_9"/>
+      </widget>
+      <widget class="QWidget" name="tabMaps">
+       <attribute name="title">
+        <string>Maps</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_10"/>
       </widget>
      </widget>
     </item>

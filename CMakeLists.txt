@@ -1,30 +1,42 @@
 cmake_minimum_required(VERSION 3.16)
 project(GuiSensor VERSION 0.1 LANGUAGES CXX)
 
-# Set standar C++ yang digunakan
+# Set standard C++ version used
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+
+# Gunakan forward slash sebagai pemisah path
+set(CMAKE_PREFIX_PATH "C:/Qt/6.9.0/msvc2022_64")
+
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# Aktifkan fitur otomatis Qt
+# Enable Qt's automatic handling of UIC, MOC, and RCC
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-# Set versi Qt
+# Set Qt version major
 set(QT_VERSION_MAJOR 6)
 
-# Cari Qt6 dan komponen yang dibutuhkan
-find_package(Qt6 REQUIRED COMPONENTS Widgets SerialPort PrintSupport LinguistTools)
 
-# Definisikan file terjemahan
+# Add MSVC specific compiler options
+if(MSVC)
+    add_compile_options(/Zc:__cplusplus)
+endif()
+
+# Find the required Qt components
+find_package(Qt6 REQUIRED COMPONENTS Widgets SerialPort PrintSupport LinguistTools WebEngineWidgets)
+
+# Define translation files
 set(TS_FILES GuiSensor_id_ID.ts)
+
+# Skip VCPKG setup and set Qt-specific flags
 set(QT_CREATOR_SKIP_VCPKG_SETUP ON)
 add_definitions(-DQT_NO_VERSION_TAGGING)
-file(GLOB SOURCES CONFIGURE_DEPENDS "widgets/*.cpp")
 
-# Definisikan semua sumber daya proyek secara eksplisit (hindari GLOB)
+# Define project sources explicitly
 set(PROJECT_SOURCES
     main.cpp
     mainwindow.cpp
@@ -41,32 +53,37 @@ set(PROJECT_SOURCES
     widgets/CombinedGraph/CombinedGraphs.h
     widgets/CombinedGraph/CombinedGraphs.cpp
     widgets/CombinedGraph/CombinedGraphs.ui
+    widgets/Maps/maps.ui
+    widgets/Maps/maps.h
+    widgets/Maps/maps.cpp
     utils/SerialHandler.h
     utils/SerialHandler.cpp
 )
+# qt_add_resources(GuiSensor "resources.qrc")
+# Add translation files (not as compile sources)
+set(TRANSLATION_FILES ${TS_FILES})
 
-# Tambahkan file terjemahan ke proyek (tidak sebagai sumber kompilasi)
-set(TRANSLATION_FILES
-    ${TS_FILES}
-)
-
-# Membuat executable untuk proyek Qt
+# Create the Qt executable
 qt_add_executable(GuiSensor
     MANUAL_FINALIZATION
     ${PROJECT_SOURCES}
+    resources.qrc
 )
 
-# Membuat file terjemahan untuk Qt
+# Create translations for Qt
 qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TRANSLATION_FILES})
 
-# Menambahkan library yang diperlukan
+# Link the necessary Qt libraries
 target_link_libraries(GuiSensor PRIVATE
     Qt6::Widgets
     Qt6::SerialPort
     Qt6::PrintSupport
+    Qt6::WebEngineWidgets
+    Qt6::Quick
+    Qt6::QuickWidgets
 )
 
-# Set properti target untuk Windows dan macOS
+# Set proper target properties for Windows/macOS
 set_target_properties(GuiSensor PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER com.example.GuiSensor
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
@@ -74,18 +91,23 @@ set_target_properties(GuiSensor PROPERTIES
     MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
 )
+
+# Include directories for widgets and utils
 target_include_directories(GuiSensor PRIVATE
     ${CMAKE_SOURCE_DIR}/widgets
     ${CMAKE_SOURCE_DIR}/utils
 )
 
-# Instalasi untuk executable
+# Include the project root directory
+include_directories(${CMAKE_SOURCE_DIR})
+
+# Install the executable
 include(GNUInstallDirs)
 install(TARGETS GuiSensor
-    BUNDLE DESTINATION .
+    BUNDLE DESTINATION . 
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
-# Finalisasi executable
+# Finalize the Qt executable
 qt_finalize_executable(GuiSensor)

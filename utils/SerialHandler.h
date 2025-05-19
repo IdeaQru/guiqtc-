@@ -20,7 +20,7 @@ public:
     QString getLastError() const;
 
 signals:
-    void dataReceived(double afr, double rpm, double temp, double tps, double map, double timestamp);
+    void dataReceived(double afr, double rpm, double temp, double tps, double map,double lat, double lng,double speed, double timestamp);
     void connectionStatusChanged(bool connected);
     void errorOccurred(const QString &errorMessage);
 

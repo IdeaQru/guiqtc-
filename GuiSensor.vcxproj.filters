@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Project\GuiSensor\GuiSensor_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Project\GuiSensor\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Project\GuiSensor\mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Project\GuiSensor\qcustomplot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Project\GuiSensor\widgets\SensorCards\SensorCards.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Project\GuiSensor\widgets\IndividualGraphs\IndividualGraphs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Project\GuiSensor\widgets\CombinedGraph\CombinedGraphs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Project\GuiSensor\widgets\Maps\maps.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Project\GuiSensor\utils\SerialHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Project\GuiSensor\GuiSensor_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Project\GuiSensor\GuiSensor_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Project\GuiSensor\GuiSensor_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Project\GuiSensor\mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\qcustomplot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\widgets\SensorCards\SensorCards.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\widgets\IndividualGraphs\IndividualGraphs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\widgets\CombinedGraph\CombinedGraphs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\widgets\Maps\maps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\utils\SerialHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\GuiSensor_autogen\include_Debug\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\GuiSensor_autogen\include_Debug\widgets\SensorCards\ui_SensorCards.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\GuiSensor_autogen\include_Debug\widgets\IndividualGraphs\ui_IndividualGraphs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\GuiSensor_autogen\include_Debug\widgets\CombinedGraph\ui_CombinedGraphs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\GuiSensor_autogen\include_Debug\widgets\Maps\ui_maps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\GuiSensor_autogen\include_Release\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\GuiSensor_autogen\include_Release\widgets\SensorCards\ui_SensorCards.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\GuiSensor_autogen\include_Release\widgets\IndividualGraphs\ui_IndividualGraphs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\GuiSensor_autogen\include_Release\widgets\CombinedGraph\ui_CombinedGraphs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\GuiSensor_autogen\include_Release\widgets\Maps\ui_maps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\GuiSensor_autogen\include_MinSizeRel\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\GuiSensor_autogen\include_MinSizeRel\widgets\SensorCards\ui_SensorCards.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\GuiSensor_autogen\include_MinSizeRel\widgets\IndividualGraphs\ui_IndividualGraphs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\GuiSensor_autogen\include_MinSizeRel\widgets\CombinedGraph\ui_CombinedGraphs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\GuiSensor_autogen\include_MinSizeRel\widgets\Maps\ui_maps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\GuiSensor_autogen\include_RelWithDebInfo\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\GuiSensor_autogen\include_RelWithDebInfo\widgets\SensorCards\ui_SensorCards.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\GuiSensor_autogen\include_RelWithDebInfo\widgets\IndividualGraphs\ui_IndividualGraphs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\GuiSensor_autogen\include_RelWithDebInfo\widgets\CombinedGraph\ui_CombinedGraphs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Project\GuiSensor\GuiSensor_autogen\include_RelWithDebInfo\widgets\Maps\ui_maps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Project\GuiSensor\CMakeFiles\2859f6769f7643abd3fe14b5f466628e\autouic_(CONFIG).stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Project\GuiSensor\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Project\GuiSensor\mainwindow.ui" />
+    <None Include="D:\Project\GuiSensor\widgets\SensorCards\SensorCards.ui" />
+    <None Include="D:\Project\GuiSensor\widgets\IndividualGraphs\IndividualGraphs.ui" />
+    <None Include="D:\Project\GuiSensor\widgets\CombinedGraph\CombinedGraphs.ui" />
+    <None Include="D:\Project\GuiSensor\widgets\Maps\maps.ui" />
+    <None Include="D:\Project\GuiSensor\GuiSensor_autogen\autouic_Debug.stamp" />
+    <None Include="D:\Project\GuiSensor\GuiSensor_autogen\autouic_Release.stamp" />
+    <None Include="D:\Project\GuiSensor\GuiSensor_autogen\autouic_MinSizeRel.stamp" />
+    <None Include="D:\Project\GuiSensor\GuiSensor_autogen\autouic_RelWithDebInfo.stamp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{E31AF660-0370-3DD2-9D8C-6D01DC822D8B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{63850F5C-5858-31A5-86CF-28F7E5EDB1A5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{AAA7F3C9-3613-3CAC-98A5-1CE6079488C2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

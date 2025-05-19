@@ -1,0 +1,15 @@
+set(CMAKE_HOST_SYSTEM "Windows-10.0.26100")
+set(CMAKE_HOST_SYSTEM_NAME "Windows")
+set(CMAKE_HOST_SYSTEM_VERSION "10.0.26100")
+set(CMAKE_HOST_SYSTEM_PROCESSOR "AMD64")
+
+include("D:/Project/GuiSensor/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Release/vcpkg-dependencies/toolchain.cmake")
+
+set(CMAKE_SYSTEM "Windows-10.0.26100")
+set(CMAKE_SYSTEM_NAME "Windows")
+set(CMAKE_SYSTEM_VERSION "10.0.26100")
+set(CMAKE_SYSTEM_PROCESSOR "AMD64")
+
+set(CMAKE_CROSSCOMPILING "FALSE")
+
+set(CMAKE_SYSTEM_LOADED 1)

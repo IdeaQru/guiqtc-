@@ -1,0 +1,9 @@
+D:/Project/GuiSensor/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Release/CMakeFiles/GuiSensor.dir
+D:/Project/GuiSensor/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Release/CMakeFiles/GuiSensor_qmlimportscan.dir
+D:/Project/GuiSensor/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Release/CMakeFiles/edit_cache.dir
+D:/Project/GuiSensor/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Release/CMakeFiles/rebuild_cache.dir
+D:/Project/GuiSensor/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Release/CMakeFiles/list_install_components.dir
+D:/Project/GuiSensor/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Release/CMakeFiles/install.dir
+D:/Project/GuiSensor/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Release/CMakeFiles/install/local.dir
+D:/Project/GuiSensor/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Release/CMakeFiles/GuiSensor_autogen_timestamp_deps.dir
+D:/Project/GuiSensor/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Release/CMakeFiles/GuiSensor_autogen.dir

@@ -1,9 +1,0 @@
-D:/Project/GuiSensor/build/Debug/CMakeFiles/GuiSensor.dir
-D:/Project/GuiSensor/build/Debug/CMakeFiles/edit_cache.dir
-D:/Project/GuiSensor/build/Debug/CMakeFiles/rebuild_cache.dir
-D:/Project/GuiSensor/build/Debug/CMakeFiles/list_install_components.dir
-D:/Project/GuiSensor/build/Debug/CMakeFiles/install.dir
-D:/Project/GuiSensor/build/Debug/CMakeFiles/install/local.dir
-D:/Project/GuiSensor/build/Debug/CMakeFiles/install/strip.dir
-D:/Project/GuiSensor/build/Debug/CMakeFiles/GuiSensor_autogen_timestamp_deps.dir
-D:/Project/GuiSensor/build/Debug/CMakeFiles/GuiSensor_autogen.dir

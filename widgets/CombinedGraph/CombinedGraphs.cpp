@@ -6,6 +6,7 @@ CombinedGraphs::CombinedGraphs(QWidget *parent) : QWidget(parent),
                                                   ui(new Ui::CombinedGraphs)
 {
     ui->setupUi(this);
+    setupDarkTheme();
     setupGraph();
 
     // Connect checkbox signals
@@ -21,30 +22,79 @@ CombinedGraphs::~CombinedGraphs()
     delete ui;
 }
 
+void CombinedGraphs::setupDarkTheme()
+{
+    // Set dark background for the widget
+    this->setStyleSheet("background-color: black;");
+    
+    // Set dark theme for the plot
+    ui->plotCombined->setBackground(QBrush(QColor(0, 0, 0)));
+    
+    // Set dark theme for checkboxes
+    QString checkboxStyle = R"(
+        QCheckBox {
+            color: white;
+            spacing: 5px;
+        }
+        QCheckBox::indicator {
+            width: 13px;
+            height: 13px;
+        }
+        QCheckBox::indicator:unchecked {
+            border: 1px solid #5A5A5A;
+            background: #2D2D2D;
+        }
+        QCheckBox::indicator:checked {
+            border: 1px solid #5A5A5A;
+            background: #2D2D2D;
+            image: url(:/images/checkbox_checked.png);
+        }
+    )";
+    
+    ui->checkAFR->setStyleSheet(checkboxStyle);
+    ui->checkRPM->setStyleSheet(checkboxStyle);
+    ui->checkTemp->setStyleSheet(checkboxStyle);
+    ui->checkTPS->setStyleSheet(checkboxStyle);
+    ui->checkMAP->setStyleSheet(checkboxStyle);
+}
+
 void CombinedGraphs::onCombinedGraphClicked(QMouseEvent *event)
 {
     // Dapatkan koordinat dalam sistem koordinat grafik
     double x = ui->plotCombined->xAxis->pixelToCoord(event->pos().x());
 
-    // Buat string untuk tooltip
-    QString tooltipText = QString("Waktu: %1 s\n").arg(x, 0, 'f', 2);
+    // Buat string untuk tooltip dengan styling dark mode
+    QString tooltipText = "<div style='background-color: #333; color: white; padding: 5px; border: 1px solid #555;'>";
+    tooltipText += QString("Waktu: %1 s<br>").arg(x, 0, 'f', 2);
 
     // Cek setiap grafik untuk nilai pada waktu x
     QVector<QString> sensorNames = {"AFR", "RPM", "Temp", "TPS", "MAP"};
+    QVector<QColor> colors = {
+        QColor(0, 255, 0),      // AFR - Hijau
+        QColor(255, 255, 0),    // RPM - Kuning
+        QColor(0, 150, 255),    // Temp - Biru
+        QColor(255, 100, 0),    // TPS - Oranye
+        QColor(0, 255, 255)     // MAP - Cyan
+    };
 
     for (int i = 0; i < ui->plotCombined->graphCount() && i < sensorNames.size(); ++i)
     {
-        if (!ui->plotCombined->graph(i)->data()->isEmpty())
+        if (!ui->plotCombined->graph(i)->data()->isEmpty() && ui->plotCombined->graph(i)->visible())
         {
             // Cari titik terdekat
             QCPGraphDataContainer::const_iterator it = ui->plotCombined->graph(i)->data()->findBegin(x);
             if (it != ui->plotCombined->graph(i)->data()->constEnd())
             {
                 double value = it->value;
-                tooltipText += QString("%1: %2\n").arg(sensorNames[i]).arg(value, 0, 'f', 2);
+                tooltipText += QString("<span style='color: %1;'>%2: %3</span><br>")
+                                .arg(colors[i].name())
+                                .arg(sensorNames[i])
+                                .arg(value, 0, 'f', 2);
             }
         }
     }
+    
+    tooltipText += "</div>";
 
     // Tampilkan tooltip
     QToolTip::showText(event->globalPos(), tooltipText, ui->plotCombined);
@@ -60,10 +110,37 @@ void CombinedGraphs::setupGraph()
     ui->plotCombined->setInteraction(QCP::iRangeZoom, true);
     ui->plotCombined->axisRect()->setupFullAxesBox();
 
+    // Setup axes colors for dark theme
+    ui->plotCombined->xAxis->setBasePen(QPen(QColor(120, 120, 120)));
+    ui->plotCombined->yAxis->setBasePen(QPen(QColor(120, 120, 120)));
+    ui->plotCombined->yAxis2->setBasePen(QPen(QColor(120, 120, 120)));
+    
+    ui->plotCombined->xAxis->setTickPen(QPen(QColor(120, 120, 120)));
+    ui->plotCombined->yAxis->setTickPen(QPen(QColor(120, 120, 120)));
+    ui->plotCombined->yAxis2->setTickPen(QPen(QColor(120, 120, 120)));
+    
+    ui->plotCombined->xAxis->setSubTickPen(QPen(QColor(80, 80, 80)));
+    ui->plotCombined->yAxis->setSubTickPen(QPen(QColor(80, 80, 80)));
+    ui->plotCombined->yAxis2->setSubTickPen(QPen(QColor(80, 80, 80)));
+    
+    ui->plotCombined->xAxis->setTickLabelColor(QColor(180, 180, 180));
+    ui->plotCombined->yAxis->setTickLabelColor(QColor(180, 180, 180));
+    ui->plotCombined->yAxis2->setTickLabelColor(QColor(180, 180, 180));
+    
+    ui->plotCombined->xAxis->setLabelColor(QColor(180, 180, 180));
+    ui->plotCombined->yAxis->setLabelColor(QColor(180, 180, 180));
+    ui->plotCombined->yAxis2->setLabelColor(QColor(180, 180, 180));
+    
+    // Grid abu-abu gelap
+    ui->plotCombined->xAxis->grid()->setPen(QPen(QColor(50, 50, 50)));
+    ui->plotCombined->yAxis->grid()->setPen(QPen(QColor(50, 50, 50)));
+
     // Setup legend
     ui->plotCombined->legend->setVisible(true);
     ui->plotCombined->legend->setFont(QFont("Arial", 9));
-    ui->plotCombined->legend->setBrush(QBrush(QColor(255, 255, 255, 100)));
+    ui->plotCombined->legend->setBrush(QBrush(QColor(30, 30, 30, 150)));
+    ui->plotCombined->legend->setBorderPen(QPen(QColor(80, 80, 80)));
+    ui->plotCombined->legend->setTextColor(QColor(180, 180, 180));
     ui->plotCombined->axisRect()->insetLayout()->setInsetAlignment(0, Qt::AlignTop | Qt::AlignRight);
 
     // Setup primary Y axis (left)
@@ -76,25 +153,25 @@ void CombinedGraphs::setupGraph()
     // Setup X axis
     ui->plotCombined->xAxis->setLabel("Time (s)");
 
-    // Add graphs for each sensor
+    // Add graphs for each sensor with updated colors for better visibility on dark background
     ui->plotCombined->addGraph();
-    ui->plotCombined->graph(0)->setPen(QPen(QColor("#2196F3")));
+    ui->plotCombined->graph(0)->setPen(QPen(QColor(0, 255, 0), 2));  // Hijau untuk AFR
     ui->plotCombined->graph(0)->setName("AFR");
 
     ui->plotCombined->addGraph(ui->plotCombined->xAxis, ui->plotCombined->yAxis2);
-    ui->plotCombined->graph(1)->setPen(QPen(QColor("#ff4444")));
+    ui->plotCombined->graph(1)->setPen(QPen(QColor(255, 255, 0), 2));  // Kuning untuk RPM
     ui->plotCombined->graph(1)->setName("RPM");
 
     ui->plotCombined->addGraph(ui->plotCombined->xAxis, ui->plotCombined->yAxis2);
-    ui->plotCombined->graph(2)->setPen(QPen(QColor("#FFD700")));
+    ui->plotCombined->graph(2)->setPen(QPen(QColor(0, 150, 255), 2));  // Biru untuk Temp
     ui->plotCombined->graph(2)->setName("Temp");
 
     ui->plotCombined->addGraph();
-    ui->plotCombined->graph(3)->setPen(QPen(QColor("#00FF88")));
+    ui->plotCombined->graph(3)->setPen(QPen(QColor(255, 100, 0), 2));  // Oranye untuk TPS
     ui->plotCombined->graph(3)->setName("TPS");
 
     ui->plotCombined->addGraph();
-    ui->plotCombined->graph(4)->setPen(QPen(QColor("#FFA500")));
+    ui->plotCombined->graph(4)->setPen(QPen(QColor(0, 255, 255), 2));  // Cyan untuk MAP
     ui->plotCombined->graph(4)->setName("MAP");
 }
 
@@ -165,5 +242,6 @@ void CombinedGraphs::updateGraph(double afr, double rpm, double temp, double tps
         }
     }
 
-    ui->plotCombined->replot();
+    // Gunakan mode antrian untuk performa lebih baik
+    ui->plotCombined->replot(QCustomPlot::rpQueuedReplot);
 }

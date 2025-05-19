@@ -1,6 +1,11 @@
 {
     "files.associations": {
         "qwidget": "cpp",
-        "*.ui": "cpp"
-    }
+        "*.ui": "xml",
+        "qwebengineview": "cpp"
+    },
+"cmake.generator": "Visual Studio 17 2022", // atau "Visual Studio 16 2019" tergantung versi
+"cmake.preferredGenerators": ["Visual Studio 17 2022", "Visual Studio 16 2019"],
+// "cmake.configureArgs": ["-A", "x64"]
+
 }

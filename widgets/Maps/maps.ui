@@ -1,0 +1,17 @@
+<ui version="4.0">
+    <class>Maps</class>
+    <widget class="QWidget" name="MapsWidget">
+        <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+                <widget class="QWebEngineView" name="mapView"/>
+            </item>
+            <item>
+                <widget class="QPushButton" name="clearRouteButton">
+                    <property name="text">
+                        <string>Clear Route</string>
+                    </property>
+                </widget>
+            </item>
+        </layout>
+    </widget>
+</ui>

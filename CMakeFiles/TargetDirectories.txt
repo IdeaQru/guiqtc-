@@ -1,0 +1,5 @@
+D:/Project/GuiSensor/CMakeFiles/GuiSensor.dir
+D:/Project/GuiSensor/CMakeFiles/GuiSensor_qmlimportscan.dir
+D:/Project/GuiSensor/CMakeFiles/INSTALL.dir
+D:/Project/GuiSensor/CMakeFiles/ALL_BUILD.dir
+D:/Project/GuiSensor/CMakeFiles/ZERO_CHECK.dir

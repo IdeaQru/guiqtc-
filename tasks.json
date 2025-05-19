@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run qmake",
+            "type": "shell",
+            "command": "qmake",
+            "args": [
+                "GuiSensor.pro"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task to run qmake"
+        },
+        {
+            "label": "Build Qt project",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "-j4"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task to build Qt project"
+        }
+    ]
+}

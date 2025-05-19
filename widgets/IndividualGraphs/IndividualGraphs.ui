@@ -2,97 +2,78 @@
 <ui version="4.0">
  <class>IndividualGraphs</class>
  <widget class="QWidget" name="IndividualGraphs">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>600</height>
+   </rect>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>2</number>
+   </property>
+   <property name="leftMargin">
+    <number>2</number>
+   </property>
+   <property name="topMargin">
+    <number>2</number>
+   </property>
+   <property name="rightMargin">
+    <number>2</number>
+   </property>
+   <property name="bottomMargin">
+    <number>2</number>
+   </property>
    <item>
-    <widget class="QTabWidget" name="plotTabs">
-     <property name="currentIndex">
-      <number>0</number>
+    <widget class="QCustomPlot" name="plotAFR" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>100</height>
+      </size>
      </property>
-     <widget class="QWidget" name="tabAFR">
-      <attribute name="title">
-       <string>AFR</string>
-      </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
-        <widget class="QCustomPlot" name="plotAFR" native="true">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>300</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="tabRPM">
-      <attribute name="title">
-       <string>RPM</string>
-      </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_3">
-       <item>
-        <widget class="QCustomPlot" name="plotRPM" native="true">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>300</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="tabTemp">
-      <attribute name="title">
-       <string>Temp</string>
-      </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
-       <item>
-        <widget class="QCustomPlot" name="plotTemp" native="true">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>300</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="tabTPS">
-      <attribute name="title">
-       <string>TPS</string>
-      </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_5">
-       <item>
-        <widget class="QCustomPlot" name="plotTPS" native="true">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>300</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="tabMAP">
-      <attribute name="title">
-       <string>MAP</string>
-      </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_6">
-       <item>
-        <widget class="QCustomPlot" name="plotMAP" native="true">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>300</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCustomPlot" name="plotRPM" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>100</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCustomPlot" name="plotTemp" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>100</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCustomPlot" name="plotTPS" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>100</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCustomPlot" name="plotMAP" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>100</height>
+      </size>
+     </property>
     </widget>
    </item>
   </layout>
@@ -105,4 +86,6 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
+ <resources/>
+ <connections/>
 </ui>
